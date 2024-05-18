@@ -13,6 +13,36 @@ Rudimentary Headless CMS is a simple content management system (CMS) designed fo
 1. Clone the repository:
 2. Navigate to the project directory:
 3. Install dependencies:
+4. Set up MySQL database:
+- Create a MySQL database named `entity`.
+- Within the `entity` database, create tables named `person`, `order`, `location`, and `review` with the following attributes:
+  - `person` table:
+    - `id` (INT, AUTO_INCREMENT, PRIMARY KEY)
+    - `name` (VARCHAR)
+    - `email` (VARCHAR)
+    - `dob` (INT)
+    - `mobile` (VARCHAR)
+  - `order` table:
+    - `id` (INT, AUTO_INCREMENT, PRIMARY KEY)
+    - `orderNo` (VARCHAR)
+    - `customername` (VARCHAR)
+    - `orderdate` (INT)
+    - `amount` (DECIMAL)
+    - `status` (VARCHAR)
+  - `location` table:
+    - `id` (INT, AUTO_INCREMENT, PRIMARY KEY)
+    - `name` (VARCHAR)
+    - `latitude` (DECIMAL)
+    - `longitude` (DECIMAL)
+    - `disc` (VARCHAR)
+  - `review` table:
+    - `id` (INT, AUTO_INCREMENT, PRIMARY KEY)
+    - `productid` (INT)
+    - `customername` (VARCHAR)
+    - `rating` (INT)
+    - `productreview` (TEXT)
+5. Update the MySQL connection configuration in the backend server (`server.js`) to match your MySQL database credentials.
+
 
 ## Usage
 1. Start the backend server:

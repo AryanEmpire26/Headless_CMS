@@ -55,6 +55,7 @@ Rudimentary Headless CMS is a simple content management system (CMS) designed fo
 - Express.js
 - MySql
 - Axios
+- CORS
 - React Router
 - HTML
 - CSS

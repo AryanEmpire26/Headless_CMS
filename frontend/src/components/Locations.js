@@ -34,6 +34,7 @@ const Locations = () => {
     try {
       await axios.post('http://localhost:5000/api/locations', formData);
       fetchLocations(); // Fetch updated data after adding a locations
+      setFormData({ name: '', latitude: '', longitude: '', disc: '' });
     } catch (error) {
       console.error('Error adding locations:', error);
     }

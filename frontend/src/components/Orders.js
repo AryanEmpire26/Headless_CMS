@@ -35,6 +35,7 @@ const Orders = () => {
     try {
       await axios.post('http://localhost:5000/api/orders', formData);
       fetchOrders(); // Fetch updated data after adding an orders
+      setFormData({ orderNo: '', customername: '', orderdate: '', amount: '',status: '' });
     } catch (error) {
       console.error('Error adding orders:', error);
     }
